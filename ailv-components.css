@@ -1,5 +1,9 @@
-/* 爱旅畅达统一组件库 v1.0 */
-/* 基础按钮组件 */
+/* =====================================
+   爱旅畅达统一组件库 v1.0
+   所有系统通用：按钮、表单、卡片、表格、导航、搜索、状态标签
+   ===================================== */
+
+/* 1. 按钮组件 */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -48,7 +52,51 @@
     font-size: 16px;
 }
 
-/* 旅游产品卡片组件 */
+/* 2. 输入框/表单组件 */
+.input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.input:focus {
+    outline: none;
+    border-color: #1677FF;
+    box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+}
+
+/* 3. 状态标签组件 */
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.tag-success {
+    background-color: #f6ffed;
+    color: #52c41a;
+}
+.tag-warning {
+    background-color: #fffbe6;
+    color: #faad14;
+}
+.tag-danger {
+    background-color: #fff2f0;
+    color: #ff4d4f;
+}
+.tag-primary {
+    background-color: #e6f7ff;
+    color: #1890ff;
+}
+.tag-default {
+    background-color: #fafafa;
+    color: #666;
+}
+
+/* 4. 旅游产品卡片组件 */
 .product-card {
     width: 100%;
     background-color: white;
@@ -88,7 +136,7 @@
     margin-bottom: 12px;
 }
 
-/* 统计数据卡片组件 */
+/* 5. 统计数据卡片组件 */
 .stat-card {
     background-color: white;
     border-radius: 8px;
@@ -117,36 +165,7 @@
     color: #F53F3F;
 }
 
-/* 状态标签组件 */
-.tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 500;
-}
-.tag-success {
-    background-color: #f6ffed;
-    color: #52c41a;
-}
-.tag-warning {
-    background-color: #fffbe6;
-    color: #faad14;
-}
-.tag-danger {
-    background-color: #fff2f0;
-    color: #ff4d4f;
-}
-.tag-primary {
-    background-color: #e6f7ff;
-    color: #1890ff;
-}
-.tag-default {
-    background-color: #fafafa;
-    color: #666;
-}
-
-/* 通用表格组件 */
+/* 6. 通用表格组件 */
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -169,17 +188,36 @@
     background-color: #fafafa;
 }
 
-/* 输入框组件 */
-.input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #d9d9d9;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: all 0.2s ease;
+/* 7. 页面切换控制 */
+.page { display: none; }
+.page.active { display: block; }
+.submenu { display: none; }
+.submenu.open { display: block; }
+.code-panel { display: none; }
+.code-panel.open { display: block; }
+.code-block {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre;
 }
-.input:focus {
-    outline: none;
-    border-color: #1677FF;
-    box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+
+/* 8. 统一页头页尾 */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.site-footer {
+    background: #1f2937;
+    color: #fff;
+    padding: 48px 0 24px;
+    margin-top: 64px;
 }
